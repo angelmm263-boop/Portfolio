@@ -1,0 +1,14 @@
+#tech {
+    background-color: #f1f1f1;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+#tech ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+#tech li {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+
+}
