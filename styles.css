@@ -12,3 +12,15 @@
     font-weight: 500;
 
 }
+p {
+    color:blue;
+}
+.texto {
+    color: green;
+}
+#test .texto {
+    color: purple;
+}
+p {
+    color: orange !important
+}

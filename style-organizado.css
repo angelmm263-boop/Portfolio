@@ -1,0 +1,99 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primario: #1f2937;
+    --color-secundario: #f9f9f9;
+    --color-texto: #222;
+    --color-acento: #4f46e5;
+    --fuente-principal: 'Poppins', sans-serif;
+}
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+header {
+    background-color: var(--color-primario);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    }
+
+.nav-list a:hover {
+    color: var(--color-acento);
+}
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    }
+
+h2 {
+    margin-bottom: 1rem;
+    color: var(--color-primario);
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.3rem;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+.project-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    }
+
+.project-card:hover {
+    transform: scale(1.02);
+}
+
+footer {
+    text-align: center;
+    background-color: var(--color-primario);
+    color: white;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+.text-center {
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 1rem;
+}
