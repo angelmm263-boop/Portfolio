@@ -1,26 +1,46 @@
+<!-- La declaración <!DOCTYPE html> define que este documento es un documento HTML5 -->
 <!DOCTYPE html>
+<!-- El elemento <html> es el elemento raíz de una página HTML. El atributo lang especifica el idioma del documento. -->
 <html lang="en">
 <head>
+    <!-- El elemento <head> contiene metadatos (datos sobre los datos) y no se muestra en la página. -->
+    <!-- La etiqueta <meta charset="UTF-8"> especifica la codificación de caracteres para el documento HTML. UTF-8 es un conjunto de caracteres universal que incluye casi todos los caracteres y símbolos. -->
     <meta charset="UTF-8">
+    <!-- La etiqueta <meta name="viewport"> proporciona al navegador instrucciones sobre cómo controlar las dimensiones y la escala de la página. 'width=device-width' establece el ancho de la página para que siga el ancho de la pantalla del dispositivo. 'initial-scale=1.0' establece el nivel de zoom inicial cuando la página es cargada por primera vez por el navegador. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- El elemento <title> especifica un título para la página HTML, que se muestra en la barra de título del navegador o en la pestaña de la página. -->
     <title>Document</title>
 </head>
 <body>
+    <!-- El elemento <body> contiene todo el contenido de una página HTML, como encabezados, párrafos, imágenes, hipervínculos, tablas, listas, etc. -->
+    
+    <!-- El elemento <header> representa un contenedor para contenido introductorio o un conjunto de enlaces de navegación. -->
     <header>
+        <!-- El elemento <h1> define el encabezado más importante. -->
         <h1>Event Hub</h1>
+        <!-- El elemento <nav> define un conjunto de enlaces de navegación. -->
         <nav>
+            <!-- El elemento <ul> define una lista desordenada (con viñetas). -->
             <ul>
+                <!-- El elemento <li> define un ítem de la lista. -->
+                <!-- El elemento <a> define un hipervínculo, que se utiliza para enlazar de una página a otra. El atributo href especifica la URL de la página a la que va el enlace. -->
                 <li><a href="#upcoming-events">Upcoming Events</a></li>
                 <li><a href="#past-events">Past Events</a></li>
 
             </ul>
         </nav>
     </header>
+    <!-- El elemento <main> especifica el contenido principal de un documento. -->
     <main>
+        <!-- El elemento <section> define una sección en un documento. El atributo id proporciona un identificador único para el elemento. -->
         <section id="upcoming-events">
+            <!-- El elemento <h2> define un encabezado de nivel 2. -->
             <h2>Upcoming Events</h2>
+            <!-- El elemento <article> especifica contenido independiente y autónomo. -->
             <article>
+                <!-- El elemento <h3> define un encabezado de nivel 3. -->
                 <h3>Concert Night</h3>
+                <!-- El elemento <p> define un párrafo. -->
                 <p>Join us for an evening of live music and entertainment.</p>
             </article>
             <article>
@@ -33,6 +53,7 @@
             <article>
                 <h3>Charity Gala</h3>
                 <p>A night of giving and celebration for a good cause.</p>
+                <!-- El elemento <img> se utiliza para incrustar una imagen en una página HTML. El atributo src especifica la ruta a la imagen. El atributo alt proporciona un texto alternativo para una imagen, si el usuario por alguna razón no puede verla. -->
                 <img src="https://cdn.freecodecamp.org/curriculum/labs/past-event1.jpg" alt="Charity Gala">
             </article>
             <article>

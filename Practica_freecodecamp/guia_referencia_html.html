@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Referencia HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        .description {
+            min-width: 250px;
+        }
+        .example {
+            min-width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Guía de Referencia Rápida de HTML</h1>
+        <p>Esta guía contiene una tabla organizada con los elementos, atributos y conceptos más comunes de HTML para ayudarte en tu carrera como desarrollador Full Stack.</p>
+    </header>
+
+    <main>
+        <!-- Sección para Atributos Globales -->
+        <section id="global-attributes">
+            <h2>Atributos Globales</h2>
+            <p>Estos atributos se pueden usar en casi todos los elementos HTML.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Atributo</th>
+                        <th class="description">Descripción</th>
+                        <th class="example">Ejemplo de Uso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>id</code></td>
+                        <td>Define un <strong>identificador único</strong> para un elemento. Se usa para apuntar a un elemento específico con CSS o JavaScript. No debe repetirse en la página.</td>
+                        <td><code>&lt;div id="main-container"&gt;...&lt;/div&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>class</code></td>
+                        <td>Asigna una o más <strong>clases</strong> a un elemento. Se usa para aplicar estilos CSS o seleccionar múltiples elementos con JavaScript. Un elemento puede tener varias clases, separadas por espacios.</td>
+                        <td><code>&lt;p class="text-bold featured"&gt;...&lt;/p&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>style</code></td>
+                        <td>Aplica <strong>estilos CSS en línea</strong> directamente al elemento. No es una práctica recomendada para estilos complejos, es mejor usar archivos CSS externos.</td>
+                        <td><code>&lt;h1 style="color: blue; font-size: 24px;"&gt;Título&lt;/h1&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>title</code></td>
+                        <td>Proporciona <strong>información adicional</strong> sobre un elemento. Generalmente se muestra como un "tooltip" (cajita de texto) cuando el cursor pasa sobre el elemento.</td>
+                        <td><code>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>lang</code></td>
+                        <td>Especifica el <strong>idioma</strong> del contenido del elemento. Ayuda a los motores de búsqueda y navegadores.</td>
+                        <td><code>&lt;p lang="fr"&gt;Bonjour le monde!&lt;/p&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>data-*</code></td>
+                        <td>Permite almacenar <strong>datos personalizados</strong> privados para la página o aplicación. Son completamente personalizables (ej. <code>data-user-id</code>).</td>
+                        <td><code>&lt;div data-product-id="12345"&gt;Producto&lt;/div&gt;</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección para Elementos de Estructura y Contenido -->
+        <section id="structure-elements">
+            <h2>Elementos de Estructura y Contenido</h2>
+            <p>Estos elementos definen la estructura semántica de la página y organizan el contenido principal.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Elemento</th>
+                        <th class="description">Descripción</th>
+                        <th class="example">Atributos y Ejemplo de Uso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>&lt;html&gt;</code></td>
+                        <td>Elemento raíz que envuelve todo el contenido de la página.</td>
+                        <td><code>lang</code>: Especifica el idioma. <br><code>&lt;html lang="es"&gt;...&lt;/html&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;head&gt;</code></td>
+                        <td>Contiene metadatos del documento, como el título, enlaces a CSS y scripts. No es visible en la página.</td>
+                        <td><code>&lt;head&gt;...&lt;/head&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;body&gt;</code></td>
+                        <td>Contiene todo el contenido visible de la página web.</td>
+                        <td><code>&lt;body&gt;...&lt;/body&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;header&gt;</code></td>
+                        <td>Define la cabecera de una página o sección. Suele contener el logo, el título principal y la navegación.</td>
+                        <td><code>&lt;header&gt;&lt;h1&gt;Mi Blog&lt;/h1&gt;&lt;/header&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;nav&gt;</code></td>
+                        <td>Define un bloque de enlaces de navegación.</td>
+                        <td><code>&lt;nav&gt;&lt;a href="/inicio"&gt;Inicio&lt;/a&gt;&lt;/nav&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;main&gt;</code></td>
+                        <td>Representa el contenido principal y único del documento. Solo debe haber un <code>&lt;main&gt;</code> por página.</td>
+                        <td><code>&lt;main&gt;&lt;h2&gt;Artículo Principal&lt;/h2&gt;&lt;/main&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;section&gt;</code></td>
+                        <td>Define una sección genérica en un documento, generalmente con un encabezado.</td>
+                        <td><code>&lt;section&gt;&lt;h2&gt;Sobre Nosotros&lt;/h2&gt;...&lt;/section&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;article&gt;</code></td>
+                        <td>Representa contenido independiente y autocontenido, como un post de blog, un artículo de noticias o un comentario.</td>
+                        <td><code>&lt;article&gt;&lt;h3&gt;Título del Post&lt;/h3&gt;...&lt;/article&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;aside&gt;</code></td>
+                        <td>Define contenido relacionado pero separado del contenido principal (como una barra lateral o un bloque de anuncios).</td>
+                        <td><code>&lt;aside&gt;&lt;h3&gt;Posts Relacionados&lt;/h3&gt;...&lt;/aside&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;footer&gt;</code></td>
+                        <td>Define el pie de página de un documento o sección. Suele contener información de copyright, contacto y enlaces.</td>
+                        <td><code>&lt;footer&gt;&lt;p&gt;&copy; 2024 Mi Empresa&lt;/p&gt;&lt;/footer&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code></td>
+                        <td>Definen encabezados, donde <code>&lt;h1&gt;</code> es el más importante y <code>&lt;h6&gt;</code> el menos importante.</td>
+                        <td><code>&lt;h1&gt;Título Principal&lt;/h1&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;p&gt;</code></td>
+                        <td>Define un párrafo de texto.</td>
+                        <td><code>&lt;p&gt;Este es un párrafo.&lt;/p&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;a&gt;</code></td>
+                        <td>Crea un hipervínculo (enlace) a otras páginas web, archivos o ubicaciones dentro de la misma página.</td>
+                        <td><code>href</code>: URL de destino. <br><code>target="_blank"</code>: Abre en nueva pestaña. <br><code>&lt;a href="https://google.com"&gt;Ir a Google&lt;/a&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;img&gt;</code></td>
+                        <td>Incrusta una imagen en la página. Es un elemento vacío (no tiene etiqueta de cierre).</td>
+                        <td><code>src</code>: Ruta de la imagen. <br><code>alt</code>: Texto alternativo (importante para accesibilidad). <br><code>&lt;img src="logo.png" alt="Logo de la empresa"&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code></td>
+                        <td><code>&lt;ul&gt;</code>: Lista desordenada (viñetas). <br><code>&lt;ol&gt;</code>: Lista ordenada (números). <br><code>&lt;li&gt;</code>: Elemento de una lista.</td>
+                        <td><code>&lt;ul&gt;&lt;li&gt;Elemento 1&lt;/li&gt;&lt;/ul&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;div&gt;</code></td>
+                        <td>Contenedor genérico en bloque. Se usa para agrupar otros elementos y aplicarles estilos con CSS o manipularlos con JavaScript. No tiene valor semántico.</td>
+                        <td><code>&lt;div class="container"&gt;...&lt;/div&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span&gt;</code></td>
+                        <td>Contenedor genérico en línea. Se usa para agrupar texto o elementos en línea para aplicar estilos o manipularlos. No tiene valor semántico.</td>
+                        <td><code>&lt;p&gt;Texto con &lt;span style="color:red;"&gt;énfasis&lt;/span&gt;.&lt;/p&gt;</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección para Elementos de Formularios -->
+        <section id="form-elements">
+            <h2>Elementos de Formularios</h2>
+            <p>Estos elementos se utilizan para recopilar datos del usuario.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Elemento</th>
+                        <th class="description">Descripción</th>
+                        <th class="example">Atributos y Ejemplo de Uso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>&lt;form&gt;</code></td>
+                        <td>Contenedor para controles de formulario.</td>
+                        <td><code>action</code>: URL a la que se envían los datos. <br><code>method</code>: Método HTTP (<code>get</code> o <code>post</code>). <br><code>&lt;form action="/submit" method="post"&gt;...&lt;/form&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;input&gt;</code></td>
+                        <td>Elemento de entrada de datos más versátil. Su comportamiento cambia según el atributo <code>type</code>.</td>
+                        <td><code>type</code>: (<code>text</code>, <code>password</code>, <code>email</code>, <code>number</code>, <code>checkbox</code>, <code>radio</code>, <code>submit</code>, etc.). <br><code>name</code>: Nombre del campo. <br><code>value</code>: Valor del campo. <br><code>placeholder</code>: Texto de ejemplo. <br><code>required</code>: Campo obligatorio. <br><code>&lt;input type="text" name="username" placeholder="Nombre de usuario"&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;label&gt;</code></td>
+                        <td>Define una etiqueta para un elemento <code>&lt;input&gt;</code>. Mejora la accesibilidad.</td>
+                        <td><code>for</code>: Asocia la etiqueta con un <code>input</code> a través de su <code>id</code>. <br><code>&lt;label for="user"&gt;Usuario:&lt;/label&gt;&lt;input id="user" type="text"&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;textarea&gt;</code></td>
+                        <td>Define un campo de entrada de texto de múltiples líneas.</td>
+                        <td><code>rows</code>: Número de filas visibles. <br><code>cols</code>: Número de columnas visibles. <br><code>&lt;textarea name="comment" rows="4" cols="50"&gt;&lt;/textarea&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;select&gt;</code> y <code>&lt;option&gt;</code></td>
+                        <td><code>&lt;select&gt;</code>: Crea un menú desplegable. <br><code>&lt;option&gt;</code>: Define una opción dentro del menú.</td>
+                        <td><code>&lt;select name="role"&gt;&lt;option value="admin"&gt;Administrador&lt;/option&gt;&lt;/select&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;button&gt;</code></td>
+                        <td>Define un botón clicable.</td>
+                        <td><code>type</code>: (<code>submit</code>, <code>reset</code>, <code>button</code>). <br><code>&lt;button type="submit"&gt;Enviar&lt;/button&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;fieldset&gt;</code> y <code>&lt;legend&gt;</code></td>
+                        <td><code>&lt;fieldset&gt;</code>: Agrupa elementos relacionados en un formulario. <br><code>&lt;legend&gt;</code>: Define un título para el <code>&lt;fieldset&gt;</code>.</td>
+                        <td><code>&lt;fieldset&gt;&lt;legend&gt;Información Personal&lt;/legend&gt;...&lt;/fieldset&gt;</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Espero que esta guía te sea de gran ayuda. ¡Mucho éxito en tu camino como desarrollador!</p>
+    </footer>
+
+</body>
+</html>

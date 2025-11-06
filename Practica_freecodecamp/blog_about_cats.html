@@ -1,20 +1,38 @@
+<!-- La declaración <!DOCTYPE html> define que este documento es un documento HTML5. -->
 <!DOCTYPE html>
+<!-- El elemento <html> es el elemento raíz de una página HTML. El atributo lang especifica el idioma del documento. -->
 <html lang="en">
 <head>
+    <!-- El elemento <head> contiene metadatos (datos sobre los datos) y no se muestra en la página. -->
+    <!-- La etiqueta <meta charset="UTF-8"> especifica la codificación de caracteres para el documento HTML. UTF-8 es un conjunto de caracteres universal. -->
     <meta charset="UTF-8">
+    <!-- La etiqueta <meta name="viewport"> controla las dimensiones y la escala de la página en dispositivos móviles. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- El elemento <title> especifica un título para la página, que se muestra en la pestaña del navegador. -->
     <title>Mr. Whiskers' Blog</title>
+    <!-- El elemento <link> se utiliza para vincular hojas de estilo externas. El atributo rel especifica la relación entre el documento actual y el recurso vinculado, y href especifica la URL de la hoja de estilos. -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- El elemento <body> contiene todo el contenido visible de una página HTML. -->
+    
+    <!-- El elemento <header> representa un contenedor para contenido introductorio o un conjunto de enlaces de navegación. -->
     <header>
+        <!-- El elemento <h1> define el encabezado más importante. -->
         <h1>Welcome to Mr. Whiskers' Blog Page!</h1>
+        <!-- El elemento <figure> se utiliza para agrupar contenido multimedia, como una imagen, con su leyenda. -->
         <figure>
+            <!-- El elemento <img> se utiliza para incrustar una imagen. src es la fuente de la imagen, alt es el texto alternativo y width establece el ancho. -->
             <img 
             src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg" alt="Mr. Whiskers the Cat" width="300">
+            <!-- El elemento <figcaption> define una leyenda o título para un elemento <figure>. -->
             <figcaption>Mr. Whiskers enjoying a sunny day!</figcaption>
+            <!-- El elemento <nav> define un conjunto de enlaces de navegación. -->
             <nav>
+                <!-- El elemento <ul> define una lista desordenada. -->
                 <ul>
+                    <!-- El elemento <li> define un ítem de la lista. -->
+                    <!-- El elemento <a> define un hipervínculo. El atributo href especifica la URL a la que enlaza. -->
                     <li><a href="#about-cats">About Cats</a></li>
                     <li><a href="#cat-care-tips">Cat Care Tips</a></li>
                     <li><a href="#fun-facts">Fun Cat Facts</a></li>
@@ -22,15 +40,21 @@
             </nav>
         </figure>
     </header>
+    <!-- El elemento <main> especifica el contenido principal de un documento. -->
     <main>
+        <!-- El elemento <section> define una sección en un documento. El atributo id proporciona un identificador único. -->
         <section id="about-cats">
+            <!-- El elemento <h2> define un encabezado de nivel 2. -->
             <h2>About</h2>
+            <!-- El elemento <p> define un párrafo. -->
             <p>Hi there! I'm Jane Doe, a passionate writer who finds endless inspiration in the antics of my beloved cat, Mr. Whiskers.</p>
             <p>His playful nature and boundless energy keeps me on my toes. I love him so much.</p>
         </section>
         <section id="cat-care-tips">
             <h2>Cat Care Tips</h2>
+        <!-- El elemento <article> especifica contenido independiente y autónomo, como una entrada de blog. -->
         <article>
+            <!-- El elemento <h3> define un encabezado de nivel 3. -->
             <h3>Mr. Whiskers' First Day Home</h3>
             <p>Bringing Mr. Whiskers home was a joyous occasion filled with excitement and a bit of nervousness. He quickly adapted to his new surroundings and made himself comfortable.</p>
         </article>
@@ -43,8 +67,10 @@
             <p>Mr. Whiskers has a collection of favorite toys that keep him entertained for hours. From feather wands to laser pointers, he loves to chase and pounce on anything that moves!</p>
         </article>
     </main>
+    <!-- El elemento <footer> define un pie de página para un documento o sección. -->
     <footer>
         <h2>Contact</h2>
+        <!-- El elemento <address> define la información de contacto del autor/propietario de un documento o un artículo. -->
         <address>
             123 Cat Lane<br> Meowtown, CA 90210<br>
             <p>Phone: 555-555-5555</p>

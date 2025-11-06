@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Encabezado principal y descripción del formulario -->
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    
+    <!-- Inicio del formulario de encuesta -->
+    <form id="survey-form">
+        <!-- Campo para el nombre del usuario -->
+        <label for="name" id="name-label">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required><br>
+        
+        <!-- Campo para el correo electrónico del usuario -->
+        <label for="email" id="email-label">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required><br>
+        
+        <!-- Campo numérico para la edad del usuario con un rango mínimo y máximo -->
+        <label for="number" id="number-label" required>Age</label>
+        <input type="number" id="number" placeholder="Age"
+        min="10"
+        max="50"><br>
+        
+        <!-- Menú desplegable para seleccionar el rol actual del usuario -->
+        <label for="dropdown" id="dropdown-label">Which option best describes your current role?</label><br>
+        <select id="dropdown">
+            <option value="student">Student</option>
+            <option value="full-time-job">Full Time Job</option>
+            <option value="full-time-learner">Full Time Learner</option>
+            <option value="prefer-not-to-say">Prefer not to say</option>
+            <option value="other">Other</option>
+        </select><br>
+        
+        <!-- Grupo de botones de radio para la recomendación. El atributo "name" los agrupa. -->
+        <label for="radio-buttons" id="radio-buttons-label">Would you recommend freeCodeCamp to a friend?</label><br>
+        <input type="radio"  id="recommend-definitely" name="recommend" value="definitely">Definitely
+        <input type="radio" id="recommend-maybe" name="recommend" value="maybe">Maybe
+        <input type="radio" id="recommend-not-sure" name="recommend" value="not-sure">Not sure<br>
+        
+        <!-- Menú desplegable para seleccionar la característica favorita -->
+        <label for="dropdown2" id="dropdown2-label">What is your favorite feature of freeCodeCamp?</label><br>
+        <select id="dropdown2">
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="certifications">Certifications</option>
+            <option value="other">Other</option>
+        </select><br>
+        
+        <!-- Grupo de casillas de verificación para seleccionar múltiples mejoras -->
+        <label for="checkboxes" id="checkboxes-label">What would you like to see improved? (Check all that apply)</label><br>
+        <input type="checkbox" id="improve-challenges" name="challenges" value="challenges">Challenges
+        <input type="checkbox" id="improve-projects" name="projects" value="projects">Projects
+        <input type="checkbox" id="improve-community" name="community" value="community">Community
+        <input type="checkbox" id="improve-open-source" name="open-source" value="open-source">Open Source
+        <input type="checkbox" id="improve-gitter-help-rooms" name="gitter-help-rooms" value="gitter-help-rooms">Gitter help rooms<br>
+        <input type="checkbox" id="improve-videos" name="videos" value="videos">Videos
+        <input type="checkbox" id="improve-city-meetups" name="city-meetups" value="city-meetups">City Meetups
+        <input type="checkbox" id="improve-wiki" name="wiki" value="wiki">Wiki
+        <input type="checkbox" id="improve-forum" name="forum" value="forum">Forum
+        <input type="checkbox" id="improve-additional-courses" name="additional-courses" value="additional-courses">Additional Courses<br>
+        
+        <!-- Área de texto para comentarios o sugerencias adicionales -->
+        <label for="textarea" id="textarea-label">Any comments or suggestions?</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comment here..."></textarea><br>
+        
+        <!-- Botón para enviar el formulario -->
+        <button type="submit" id="submit">Submit</button>
+</body>
+</html>
